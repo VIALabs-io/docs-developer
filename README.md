@@ -1,57 +1,37 @@
-# Docus Starter
+# CryptoLink Developer Documentation
 
-Starter template for [Docus](https://docus.dev).
+Welcome to the CryptoLink Developer Documentation repository. This project hosts comprehensive documentation for CryptoLink's suite of blockchain development tools and technologies, designed to facilitate cross-chain communication and smart contract development.
 
-## Clone
+## Overview
 
-Clone the repository (using `nuxi`):
+Our documentation covers a range of topics including detailed breakdowns of our smart contracts, setup and usage guides, and examples of cross-chain functionality. The documentation is built with Docus, offering an intuitive and easy-to-navigate experience.
 
-```bash
-npx nuxi init -t themes/docus
-```
+## Getting Started
 
-## Setup
+### Prerequisites
 
-Install dependencies:
+Before running the documentation locally, ensure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- [NPM](https://npmjs.com/)
 
-```bash
-yarn install
-```
+### Running Locally
 
-## Development
+To view the documentation on your local machine:
 
-```bash
-yarn dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/CryptoLinkTech/docs.git
+   cd docs
+   ```
 
-## Edge Side Rendering
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Can be deployed to Vercel Functions, Netlify Functions, AWS, and most Node-compatible environments.
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-Look at all the available presets [here](https://v3.nuxtjs.org/guide/deploy/presets).
-
-```bash
-yarn build
-```
-
-## Static Generation
-
-Use the `generate` command to build your application.
-
-The HTML files will be generated in the .output/public directory and ready to be deployed to any static compatible hosting.
-
-```bash
-yarn generate
-```
-
-## Preview build
-
-You might want to preview the result of your build locally, to do so, run the following command:
-
-```bash
-yarn preview
-```
-
----
-
-For a detailed explanation of how things work, check out [Docus](https://docus.dev).
+4. Open your browser and navigate to `http://localhost:3000` to view the documentation.
