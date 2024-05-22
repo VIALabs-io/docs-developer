@@ -1,6 +1,6 @@
-# CryptoLink Developer Documentation
+# Via Labs Developer Documentation
 
-Welcome to the CryptoLink Developer Documentation repository. This project hosts comprehensive documentation for CryptoLink's suite of blockchain development tools and technologies, designed to facilitate cross-chain communication and smart contract development.
+Welcome to the Via Labs Developer Documentation repository. This project hosts comprehensive documentation for Via Labs's suite of blockchain development tools and technologies, designed to facilitate cross-chain communication and smart contract development.
 
 ## Overview
 
