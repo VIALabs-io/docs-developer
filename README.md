@@ -20,7 +20,7 @@ To view the documentation on your local machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/CryptoLinkTech/docs.git
+   git clone https://github.com/VIALabs-io/docs-developer.git
    cd docs
    ```
 
