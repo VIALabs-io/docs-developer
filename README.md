@@ -1,37 +1,33 @@
-# Via Labs Developer Documentation
+# Website
 
-Welcome to the Via Labs Developer Documentation repository. This project hosts comprehensive documentation for Via Labs's suite of blockchain development tools and technologies, designed to facilitate cross-chain communication and smart contract development.
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Overview
+### Installation
 
-Our documentation covers a range of topics including detailed breakdowns of our smart contracts, setup and usage guides, and examples of cross-chain functionality. The documentation is built with Docus, offering an intuitive and easy-to-navigate experience.
+```
+$ yarn
+```
 
-## Getting Started
+### Local Development
 
-### Prerequisites
+```
+$ yarn start
+```
 
-Before running the documentation locally, ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [NPM](https://npmjs.com/)
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Running Locally
+### Build
 
-To view the documentation on your local machine:
+```
+$ yarn build
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/VIALabs-io/docs-developer.git
-   cd docs
-   ```
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+### Deployment
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+```
+$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
 
-4. Open your browser and navigate to `http://localhost:3000` to view the documentation.
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

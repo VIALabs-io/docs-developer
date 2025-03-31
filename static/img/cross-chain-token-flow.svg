@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ethereum Chain -->
+  <rect x="50" y="50" width="200" height="200" rx="20" fill="#151515" stroke="#00E5E5" strokeWidth="2"/>
+  <text x="150" y="90" textAnchor="middle" fill="#FFFFFF" fontWeight="bold" fontSize="18">Ethereum Chain</text>
+  <circle cx="150" cy="150" r="50" fill="#333333" stroke="#00E5E5" strokeWidth="2"/>
+  <text x="150" y="155" textAnchor="middle" fill="#FFFFFF" fontWeight="bold" fontSize="16">ERC20</text>
+  
+  <!-- Polygon Chain -->
+  <rect x="550" y="50" width="200" height="200" rx="20" fill="#151515" stroke="#FF00FF" strokeWidth="2"/>
+  <text x="650" y="90" textAnchor="middle" fill="#FFFFFF" fontWeight="bold" fontSize="18">Polygon Chain</text>
+  <circle cx="650" cy="150" r="50" fill="#333333" stroke="#FF00FF" strokeWidth="2"/>
+  <text x="650" y="155" textAnchor="middle" fill="#FFFFFF" fontWeight="bold" fontSize="16">ERC20</text>
+  
+  <!-- VIA Labs Bridge -->
+  <rect x="300" y="100" width="200" height="100" rx="50" fill="#222222" stroke="url(#gradient)" strokeWidth="3"/>
+  <text x="400" y="155" textAnchor="middle" fill="#FFFFFF" fontWeight="bold" fontSize="16">VIA Labs</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00E5E5"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF00FF"/>
+    </marker>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#00E5E5"/>
+      <stop offset="100%" stopColor="#FF00FF"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Flow arrows -->
+  <path d="M210 130 C250 130, 250 130, 290 130" stroke="#00E5E5" strokeWidth="3" markerEnd="url(#arrowhead)" fill="none"/>
+  <path d="M510 130 C550 130, 550 130, 590 130" stroke="#FF00FF" strokeWidth="3" markerEnd="url(#arrowhead2)" fill="none"/>
+  <path d="M590 170 C550 170, 550 170, 510 170" stroke="#00E5E5" strokeWidth="3" markerEnd="url(#arrowhead)" fill="none"/>
+  <path d="M290 170 C250 170, 250 170, 210 170" stroke="#FF00FF" strokeWidth="3" markerEnd="url(#arrowhead2)" fill="none"/>
+  
+  <!-- Labels -->
+  <text x="250" y="120" textAnchor="middle" fill="#00E5E5" fontSize="12">Burn</text>
+  <text x="550" y="120" textAnchor="middle" fill="#FF00FF" fontSize="12">Mint</text>
+  <text x="550" y="190" textAnchor="middle" fill="#00E5E5" fontSize="12">Burn</text>
+  <text x="250" y="190" textAnchor="middle" fill="#FF00FF" fontSize="12">Mint</text>
+</svg>
