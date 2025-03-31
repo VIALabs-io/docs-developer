@@ -36,6 +36,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      gtag: {
+        trackingID: 'G-4512C8MEN4',
+        anonymizeIP: true,
+      },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
