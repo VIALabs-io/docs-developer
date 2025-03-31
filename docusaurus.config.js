@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'VIA Labs Developer Documentation',
   tagline: 'Cross-Chain Communication for Smart Contracts',
-  url: 'https://docs.vialabs.io',
+  url: 'https://developer.vialabs.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -22,7 +22,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/VIALabs-io/docs-developer/edit/main/',
+          editUrl: 'https://github.com/VIALabs-io/docs-developer/edit/master/',
           routeBasePath: '/', // Set this to empty string to make docs the landing page
         },
         blog: false, // Disable the blog feature
