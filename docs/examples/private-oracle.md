@@ -60,21 +60,11 @@ cp .env.example .env
 node scripts/deploy.js
 ```
 
-> This script will:
-> 1. Compile the WeatherOracle.sol contract
-> 2. Deploy the contract to Avalanche Testnet
-> 3. Configure the oracle for on-chain to off-chain communication
-> 4. Save deployment information for the frontend
-
 ## Step 3: Run the Oracle Node
-
-The oracle node listens for weather data requests from the contract, fetches the data from a weather API (or uses static data), and sends it back to the contract.
 
 ```bash
 node oracle/index.js
 ```
-
-> Keep this node running in a separate terminal while you interact with the oracle.
 
 ## Step 4: Request Weather Data
 

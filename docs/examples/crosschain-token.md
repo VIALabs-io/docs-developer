@@ -27,7 +27,6 @@ npm install
 # Create a .env file with your private key
 cp .env.example .env
 ```
-> Make sure your private key is correct in the .env file and has testnet tokens for both networks.
 
 ## Step 2: Deploy Your Token
 
@@ -35,20 +34,14 @@ cp .env.example .env
 node scripts/deploy.js
 ```
 
-> The MyERC20 contract is deployed to all configured networks and cross-chain messaging is configured automatically.
-
 ## Step 3: Bridge Tokens Between Networks
 
 ```bash
 node scripts/bridge.js avalanche-testnet base-testnet 5
 ```
 
-> This command bridges 5 tokens from Avalanche Fuji to Base Sepolia.
-
 
 ## Step 4: Use the Frontend
-
-The project includes a React-based frontend for interacting with your token:
 
 ```bash
 # Start the frontend
@@ -57,17 +50,11 @@ npm install
 npm start
 ```
 
-The frontend allows you to:
-- Connect your wallet
-- View your token balance on different networks
-- Bridge tokens between networks
-- Monitor cross-chain events
-
 > **🎉 Congratulations!** You've successfully created and used a cross-chain token.
 
-## Adding More Networks
+# Adding More Networks
 
-### Step 1: Edit Network Configuration
+## Step 1: Edit Network Configuration
 
 Edit the `network.config.js` file and add new network configurations:
 
@@ -112,15 +99,13 @@ const networks = {
 };
 ```
 
-### Step 2: Deploy
+## Step 2: Deploy
 
 ```bash
 node scripts/deploy.js
 ```
 
-> This will deploy to any new networks and reconfigure cross-chain messaging between all networks. The frontend supports hot-reloading and will automatically detect the new network configurations.
-
-## Next Steps
+# Next Steps
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px', margin: '30px 0'}}>
   <a href="/examples/crosschain-nft" style={{textDecoration: 'none', color: 'var(--ifm-font-color-base)'}}>
