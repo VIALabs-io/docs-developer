@@ -19,7 +19,7 @@ Before you begin, make sure you have:
 
 ```bash
 # Clone the repository
-git clone https://github.com/VIALabs-io/hello-erc721.git && cd hello-erc721
+git clone https://github.com/VIALabs-io/quickstart-nft.git && cd quickstart-nft
 
 # Install dependencies
 npm install
@@ -27,70 +27,105 @@ npm install
 # Create a .env file with your private key
 cp .env.example .env
 ```
-> Make sure your private key is correct in the .env file and has testnet tokens.
+> Make sure your private key is correct in the .env file and has testnet tokens for both networks.
 
-## Step 2: Deploy Your NFT Contract
-
-```bash
-# Deploy to Ethereum Sepolia
-npx hardhat --network ethereum-sepolia deploy
-
-# Deploy to Polygon Amoy
-npx hardhat --network polygon-amoy deploy
-```
-
-> The HelloERC721 contract is deployed on both chains.
-> NFT IDs start at [chain-id]0000 for each chain.
-
-## Step 3: Configure Cross-Chain Messaging
+## Step 2: Deploy Your NFT
 
 ```bash
-# Configure on Ethereum Sepolia
-npx hardhat --network ethereum-sepolia configure
-
-# Configure on Polygon Amoy
-npx hardhat --network polygon-amoy configure
+node scripts/deploy.js
 ```
 
-> This step registers each contract with VIA's messaging system.
+> The MyNFT contract is deployed to all configured networks, an initial NFT is minted on each network, and cross-chain messaging is configured automatically.
 
-## Step 4: Mint an NFT
+## Step 3: Bridge NFTs Between Networks
 
 ```bash
-# Mint an NFT on Polygon Amoy
-npx hardhat --network polygon-amoy mint-nft
+# List NFTs on Avalanche Testnet
+node scripts/bridge.js avalanche-testnet
+
+# Bridge NFT #431130000 from Avalanche Testnet to Base Testnet
+node scripts/bridge.js avalanche-testnet base-testnet 431130000
 ```
 
-> You'll receive the next available NFT ID. On Polygon Amoy, 
-> the first NFT will be 800020000, the next 800020001, etc.
+> You can also specify a recipient address:
+> ```bash
+> node scripts/bridge.js avalanche-testnet base-testnet 431130000 0x1234...
+> ```
 
-## Step 5: View NFT Details
+## Step 4: Use the Frontend
+
+The project includes a React-based frontend for interacting with your NFTs:
 
 ```bash
-# Check your NFT details on Polygon Amoy
-npx hardhat --network polygon-amoy get-nft --nftid 800020000
+# Start the frontend
+cd frontend
+npm install
+npm run dev
 ```
 
-> This shows the NFT's metadata and current owner.
-
-## Step 6: Send NFT Cross-Chain
-
-```bash
-# Send NFT from Polygon Amoy to Ethereum Sepolia
-npx hardhat --network polygon-amoy bridge-nft --dest 11155111 --nftid 800020000
-```
-
-> This command bridges your NFT from Polygon Amoy to Ethereum Sepolia.
-> It may take a few moments to process through the VIA network.
-
-## Step 7: Verify the Transfer
-
-```bash
-# Check that your NFT arrived on Ethereum Sepolia
-npx hardhat --network ethereum-sepolia get-nft --nftid 800020000
-```
+The frontend allows you to:
+- Connect your wallet
+- View your NFTs on different networks
+- Mint new NFTs
+- Bridge NFTs between networks
+- Monitor cross-chain events
 
 > **🎉 Congratulations!** You've successfully created and used a cross-chain NFT.
+
+## Adding More Networks
+
+### Step 1: Edit Network Configuration
+
+Edit the `network.config.js` file and add new network configurations:
+
+```javascript
+// Add a new network
+const networks = {
+  'avalanche-testnet': {
+    name: 'avalanche-testnet',
+    chainId: 43113,
+    rpcUrl: process.env.AVALANCHE_TESTNET_RPC || 'https://api.avax-test.network/ext/bc/C/rpc',
+    blockExplorer: 'https://testnet.snowtrace.io',
+    nativeCurrency: {
+      name: 'AVAX',
+      symbol: 'AVAX',
+      decimals: 18
+    }
+  },
+  'base-testnet': {
+    name: 'base-testnet',
+    chainId: 84532,
+    rpcUrl: process.env.BASE_TESTNET_RPC || 'https://sepolia.base.org',
+    blockExplorer: 'https://sepolia-explorer.base.org',
+    nativeCurrency: {
+      name: 'ETH',
+      symbol: 'ETH',
+      decimals: 18
+    }
+  },
+  // Add your new network here
+  // Example for adding Polygon Mumbai:
+  'polygon-testnet': {
+    name: 'polygon-testnet',
+    chainId: 80001,
+    rpcUrl: process.env.POLYGON_TESTNET_RPC || 'https://rpc-mumbai.maticvigil.com',
+    blockExplorer: 'https://mumbai.polygonscan.com',
+    nativeCurrency: {
+      name: 'MATIC',
+      symbol: 'MATIC',
+      decimals: 18
+    }
+  }
+};
+```
+
+### Step 2: Deploy
+
+```bash
+node scripts/deploy.js
+```
+
+> This will deploy to any new networks and reconfigure cross-chain messaging between all networks. The frontend supports hot-reloading and will automatically detect the new network configurations.
 
 ## Next Steps
 
