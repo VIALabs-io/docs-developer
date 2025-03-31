@@ -59,6 +59,6 @@ If you're having trouble obtaining testnet tokens:
 
 Once you have your testnet tokens, you're ready to start developing with VIA Labs. Check out our examples:
 
-- [HelloERC20](/examples/helloerc20): Cross-chain ERC20 token example
-- [HelloERC721](/examples/helloerc721): Cross-chain NFT example
-- [HelloHOP](/examples/hellohop): Multi-chain message passing example
+- [Cross-Chain Token](/examples/crosschain-token): Cross-chain ERC20 token example
+- [Cross-Chain NFT](/examples/crosschain-nft): Cross-chain NFT example
+- [Private Oracle](/examples/private-oracle): Multi-chain message passing example

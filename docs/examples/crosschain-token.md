@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Before you begin, make sure you have:
 
-- Node.js (v16+) and npm
+- Node.js (v20+) and npm
 - Git
 - A private key with testnet funds for deployment
 - Testnet tokens for:
@@ -131,7 +131,7 @@ node scripts/deploy.js
     </div>
   </a>
   
-  <a href="/examples/crosschain-oracle" style={{textDecoration: 'none', color: 'var(--ifm-font-color-base)'}}>
+  <a href="/examples/private-oracle" style={{textDecoration: 'none', color: 'var(--ifm-font-color-base)'}}>
     <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', transition: 'transform 0.3s ease', boxShadow: 'var(--ifm-card-shadow)', backgroundColor: 'var(--ifm-card-background-color)', display: 'flex', flexDirection: 'column', height: '100%', cursor: 'pointer'}} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
       <h3 style={{marginTop: '0', color: 'var(--ifm-heading-color)'}}>Build a Cross-Chain Oracle</h3>
       <p style={{flex: '1'}}>Connect your smart contracts to off-chain data sources across multiple chains.</p>

@@ -128,7 +128,7 @@ export default function Home() {
               <FeatureCard 
                 title="Private Oracle" 
                 description="Connect your smart contracts to off-chain data sources, private APIs, and databases through our secure P2P node network."
-                link="/examples/crosschain-oracle"
+                link="/examples/private-oracle"
                 linkText="Connect Now"
                 index={3}
               />
@@ -136,7 +136,7 @@ export default function Home() {
               <FeatureCard 
                 title="Cross-Chain NFT" 
                 description="Create and manage NFTs that can move seamlessly between blockchains without wrapping or traditional bridge mechanisms."
-                link="/examples/helloerc721"
+                link="/examples/crosschain-nft"
                 linkText="View Example"
                 index={4}
               />
@@ -144,7 +144,7 @@ export default function Home() {
               <FeatureCard 
                 title="Cross-Chain Token" 
                 description="Deploy ERC20 tokens that can be transferred across chains while maintaining their native properties without wrapped tokens."
-                link="/examples/helloerc20"
+                link="/examples/crosschain-token"
                 linkText="View Example"
                 index={5}
               />

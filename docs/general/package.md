@@ -7,7 +7,7 @@ sidebar_position: 1
 Quickly integrate cross-chain functionalities into your blockchain projects with `git clone https://github.com/VIALabs-io/contracts`.
 
 :::info
-📘 If you just want to try us out quickly or if you are experiencing issues with the more complex example, you can easily follow our [`HelloERC20` guide](/examples/helloerc20) and launch your own cross chain token in minutes. It will provide you with a great foundation.
+📘 If you just want to try us out quickly or if you are experiencing issues with the more complex example, you can easily follow our [`Cross-Chain Token` guide](/examples/crosschain-token) and launch your own cross chain token in minutes. It will provide you with a great foundation.
 :::
 
 ## Installation
