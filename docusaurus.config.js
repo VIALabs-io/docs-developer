@@ -14,22 +14,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   organizationName: 'VIALabs-io', // Usually your GitHub org/user name.
   projectName: 'docs-developer', // Usually your repo name.
   
-  // Add Google Analytics script tags directly to the head
-  scripts: [
-    {
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-4512C8MEN4',
-      async: true,
-    },
-    {
-      content: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4512C8MEN4');
-      `,
-      async: true,
-    },
-  ],
 
   presets: [
     [

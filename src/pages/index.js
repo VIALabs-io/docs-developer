@@ -18,15 +18,23 @@ function Terminal() {
       <div className="terminal__body">
         <div className="terminal__line">
           <span className="terminal__prompt">$</span>
-          <span className="terminal__command">git clone https://github.com/VIALabs-io/hello-erc20</span>
+          <span className="terminal__command">git clone https://github.com/VIALabs-io/quickstart-token</span>
         </div>
         <div className="terminal__line">
           <span className="terminal__prompt">$</span>
-          <span className="terminal__command">cd hello-erc20</span>
+          <span className="terminal__command">cd quickstart-token</span>
         </div>
         <div className="terminal__line">
           <span className="terminal__prompt">$</span>
           <span className="terminal__command">npm install</span>
+        </div>
+        <div className="terminal__line">
+          <span className="terminal__prompt">$</span>
+          <span className="terminal__command">node scripts/deploy.js</span>
+        </div>
+        <div className="terminal__line">
+          <span className="terminal__prompt">$</span>
+          <span className="terminal__command">cd frontend && npm install && npm run dev</span>
         </div>
       </div>
     </div>
