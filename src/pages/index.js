@@ -65,11 +65,11 @@ function HomepageHeader() {
             to="/examples/crosschain-nft">
             Quickstart NFT
           </Link>
-          <Link
+          {/* <Link
             className="button button--primary"
             to="/examples/private-oracle">
             Quickstart Oracle
-          </Link>
+          </Link> */}
           <Link
             className="button button--secondary"
             href="https://github.com/VIALabs-io/hello-erc20">

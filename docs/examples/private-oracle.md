@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # Private Oracle Example
 
+Private Oracles are currently available on a case by case bases, please get in touch if you have a usecase for private data integration. General availablility soon!
+
 This project demonstrates how to create and deploy a weather oracle using VIA's messaging protocol. The oracle allows smart contracts to request weather data for a zipcode, which is fetched by an off-chain node and returned to the contract.
 
 ## Prerequisites

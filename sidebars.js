@@ -33,7 +33,7 @@ module.exports = {
       items: [
         'examples/crosschain-token',
         'examples/crosschain-nft',
-        'examples/private-oracle',
+        // 'examples/private-oracle',
       ],
     },
     {
@@ -43,6 +43,14 @@ module.exports = {
       items: [
         'work-with-us/developers',
         'work-with-us/blockchains',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Slides',
+      collapsed: false,
+      items: [
+        'slides/quickstart',
       ],
     },
   ],
