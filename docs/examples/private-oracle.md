@@ -31,7 +31,6 @@ quickstart-oracle/
 │   └── features/
 │       ├── index.js         # Features registry
 │       └── WeatherOracle.js # Weather oracle feature implementation
-├── frontend/                # React frontend for interacting with the oracle
 ├── network.config.js        # Network configuration
 ├── package.json             # Project dependencies
 ├── .env.example             # Example environment variables
@@ -62,13 +61,17 @@ cp .env.example .env
 node scripts/deploy.js
 ```
 
-## Step 3: Run the Oracle Node
+## Step 3: Edit oracle/index.js
+Edit the `oracle/index.js` to set the deployed contract address which can be found in `deployments/` directory.
+
+
+## Step 4: Run the Oracle Node
 
 ```bash
 node oracle/index.js
 ```
 
-## Step 4: Request Weather Data
+## Step 5: Request Weather Data
 
 ```bash
 node scripts/request-weather.js 90210
@@ -80,14 +83,6 @@ node scripts/request-weather.js 90210
 > 3. Poll for the weather data to be received
 > 4. Display the weather data when it's available
 
-## Step 5: Use the Frontend
-
-```bash
-# Start the frontend
-cd frontend
-npm install
-npm run dev
-```
 
 > **🎉 Congratulations!** You've successfully built and used a private oracle.
 
