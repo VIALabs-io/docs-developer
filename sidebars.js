@@ -33,7 +33,7 @@ module.exports = {
       items: [
         'examples/crosschain-token',
         'examples/crosschain-nft',
-        // 'examples/private-oracle',
+        'examples/private-oracle',
       ],
     },
     {
