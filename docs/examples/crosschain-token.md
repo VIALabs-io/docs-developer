@@ -38,15 +38,6 @@ node scripts/deploy.js
 node scripts/bridge.js avalanche-testnet base-testnet 5
 ```
 
-
-## Step 4: Use the Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
 > **🎉 Congratulations!** You've successfully created and used a cross-chain token.
 
 # Adding More Networks

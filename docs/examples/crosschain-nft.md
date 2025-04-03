@@ -38,14 +38,6 @@ node scripts/bridge.js avalanche-testnet
 node scripts/bridge.js avalanche-testnet base-testnet 431130000
 ```
 
-## Step 4: Use the Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
 > **🎉 Congratulations!** You've successfully created and used a cross-chain NFT.
 
 
