@@ -40,20 +40,14 @@ quickstart-oracle/
 ## Step 1: Clone & Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/VIALabs-io/quickstart-oracle.git && cd quickstart-oracle
-
-# Install dependencies
 npm install
-
-# Create a .env file with your private keys
 cp .env.example .env
 ```
 
 > Edit the `.env` file and add:
-> - Your private key for deploying contracts (PRIVATE_KEY)
-> - Your node private key for running the oracle node (NODE_PRIVATE_KEY)
-> - Optionally, your OpenWeatherMap API key (WEATHER_API_KEY)
+> - Your private key for deploying contracts (`PRIVATE_KEY=`)
+> - Optionally, your OpenWeatherMap API key (`WEATHER_API_KEY=`) from [OpenWeatherMap](https://openweathermap.org/api)
 
 ## Step 2: Deploy Your Oracle Contract
 
@@ -61,17 +55,13 @@ cp .env.example .env
 node scripts/deploy.js
 ```
 
-## Step 3: Edit oracle/index.js
-Edit the `oracle/index.js` to set the deployed contract address which can be found in `deployments/` directory.
-
-
-## Step 4: Run the Oracle Node
+## Step 3: Run the Oracle Node
 
 ```bash
 node oracle/index.js
 ```
 
-## Step 5: Request Weather Data
+## Step 4: Request Weather Data
 
 ```bash
 node scripts/request-weather.js 90210

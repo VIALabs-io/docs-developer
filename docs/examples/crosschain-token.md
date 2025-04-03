@@ -18,15 +18,13 @@ Before you begin, make sure you have:
 ## Step 1: Clone & Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/VIALabs-io/quickstart-token.git && cd quickstart-token
-
-# Install dependencies
 npm install
-
-# Create a .env file with your private key
 cp .env.example .env
 ```
+
+> Edit the `.env` file and add:
+> - Your private key for deploying contracts (`PRIVATE_KEY=`)
 
 ## Step 2: Deploy Your Token
 
@@ -44,7 +42,6 @@ node scripts/bridge.js avalanche-testnet base-testnet 5
 ## Step 4: Use the Frontend
 
 ```bash
-# Start the frontend
 cd frontend
 npm install
 npm start

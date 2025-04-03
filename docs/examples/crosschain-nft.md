@@ -18,15 +18,12 @@ Before you begin, make sure you have:
 ## Step 1: Clone & Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/VIALabs-io/quickstart-nft.git && cd quickstart-nft
-
-# Install dependencies
 npm install
-
-# Create a .env file with your private key
 cp .env.example .env
 ```
+> Edit the `.env` file and add:
+> - Your private key for deploying contracts (`PRIVATE_KEY=`)
 
 ## Step 2: Deploy Your NFT
 
@@ -37,20 +34,16 @@ node scripts/deploy.js
 ## Step 3: Bridge NFTs Between Networks
 
 ```bash
-# List NFTs on Avalanche Testnet
 node scripts/bridge.js avalanche-testnet
-
-# Bridge NFT #431130000 from Avalanche Testnet to Base Testnet
 node scripts/bridge.js avalanche-testnet base-testnet 431130000
 ```
 
 ## Step 4: Use the Frontend
 
 ```bash
-# Start the frontend
 cd frontend
 npm install
-npm run dev
+npm start
 ```
 
 > **🎉 Congratulations!** You've successfully created and used a cross-chain NFT.
