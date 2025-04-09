@@ -53,7 +53,7 @@ Yes, there are practical limits to message size due to gas constraints. We recom
 ## Security Questions
 
 ### How secure is the VIA Labs messaging system?
-VIA Labs employs a multi-layered security approach with four validation layers: VIA Layer, Chain Layer, Project Layer, and (coming soon) PoL Layer. For a message to be processed, it must pass through all applicable layers. See our [Architecture Overview](/general/architecture#security-model) for more details.
+VIA Labs employs a multi-layered security approach with four validation layers: VIA Layer, Chain Layer, Project Layer, and (coming soon) PoL Layer. For a message to be processed, it must pass through all applicable layers. See our [Technology Overview](/general/technology-overview#security-model) for more details.
 
 ### Can messages be tampered with during transmission?
 No, messages cannot be tampered with during transmission. The multi-layered validation process ensures that only authentic messages are delivered to the destination chain.

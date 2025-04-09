@@ -110,9 +110,9 @@ export default function Home() {
           <section className="features-section">
             <div className="feature-grid">
               <FeatureCard 
-                title="Architecture" 
+                title="Technology Overview" 
                 description="Understand how our bridgeless cross-chain messaging system works with a comprehensive overview of the infrastructure and process flow."
-                link="/general/architecture"
+                link="/general/technology-overview"
                 linkText="Learn More"
                 index={0}
               />
@@ -128,7 +128,7 @@ export default function Home() {
               <FeatureCard 
                 title="Security" 
                 description="Our multi-layered validation process ensures transaction integrity across all connected chains with robust security protocols."
-                link="/general/architecture#security-model"
+                link="/general/technology-overview#security-model"
                 linkText="View Security Model"
                 index={2}
               />

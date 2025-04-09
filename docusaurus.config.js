@@ -99,8 +99,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
                 to: '/examples/crosschain-token',
               },
               {
-                label: 'Architecture',
-                to: '/general/architecture',
+                label: 'Technology Overview',
+                to: '/general/technology-overview',
               },
               {
                 label: 'Supported Networks',

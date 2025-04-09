@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # Solidity Package
 
-Quickly integrate cross-chain functionalities into your blockchain projects with `git clone https://github.com/VIALabs-io/contracts`.
+Quickly integrate cross-chain functionalities into your projects with VIA Labs' Solidity package.
 
 :::info
-📘 If you just want to try us out quickly or if you are experiencing issues with the more complex example, you can easily follow our [`Cross-Chain Token` guide](/examples/crosschain-token) and launch your own cross chain token in minutes. It will provide you with a great foundation.
+📘 If you just want to try us out quickly, follow our [`Cross-Chain Token`](/examples/crosschain-token) or [`Cross-Chain NFT`](/examples/crosschain-nft) guides to launch your own cross-chain assets in minutes.
 :::
 
 ## Installation
@@ -15,85 +15,90 @@ Quickly integrate cross-chain functionalities into your blockchain projects with
 Start by installing the package in your project:
 
 ```bash
-git clone https://github.com/VIALabs-io/contracts
+npm install https://github.com/VIALabs-io/npm-contracts
 ```
 
-## Importing the Package
+## Contract Configuration
 
-```solidity
-import "./message/MessageClient.sol";
-```
+To enable cross-chain communication in your application, you need to implement two key functions:
 
-## Example Implementation and Explanation
+1. `_sendMessage()` - Sends data to another blockchain
+2. `_processMessage()` - Receives and processes data from another blockchain
+
+## Simple Code Example
+
+Here's a straightforward example of a cross-chain ERC20 token:
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity 0.8.17;
 
-import "./message/MessageClient.sol";
+import "@vialabs-io/npm-contracts/MessageClient.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 
-contract MyCrossChainContract is MessageClient {
-    // ...
-    
-    // Function to send a message to another chain
-    function sendMessageToAnotherChain(uint destinationChainId, bytes memory data) public {
-        // Sending a message to the specified chain
-        uint txId = _sendMessage(destinationChainId, data);
-        // Additional logic after sending the message (if needed)
+contract HelloERC20 is ERC20Burnable, MessageClient {
+    constructor() ERC20("HelloERC20", "HELLO") {
+        _mint(msg.sender, 1_000_000 ether);
     }
 
-    // Overriding the _processMessage function to handle incoming messages
-    function _processMessage(uint _txId, uint _sourceChainId, bytes calldata _data) internal override {
-        // Decode the incoming message and process it
-        // Example: (address from, uint256 value) = abi.decode(_data, (address, uint256));
-        // Process the message as required
+    function bridge(uint _destChainId, address _recipient, uint _amount) external onlyActiveChain(_destChainId) {
+        // burn tokens
+        _burn(msg.sender, _amount);
+
+        // send cross chain message
+        _sendMessage(_destChainId, abi.encode(_recipient, _amount));
     }
 
-    // Additional functions and logic as required for your contract
-    // ...
+    function _processMessage(uint _sourceChainId, uint /* _sourceMsgSender */, bytes calldata _data) internal virtual override {
+        // decode message
+        (address _recipient, uint _amount) = abi.decode(_data, (address, uint));
+
+        // mint tokens
+        _mint(_recipient, _amount);
+    }
 }
 ```
 
-## Using the MessageClient ABI
+## Key Functions Explained
 
-You can import the ABI for the `MessageClient` contract directly from the package:
+### _sendMessage()
 
-```javascript
-// CommonJS
-const { MessageClientABI } = require('./message/abi');
+The `_sendMessage()` function packages and sends data to another blockchain.
 
-// ES6
-import { MessageClientABI } from './message/abi';
+```solidity
+function _sendMessage(uint destinationChainId, bytes memory data) internal returns (uint txId);
 ```
 
-You can then load contracts using this ABI:
+Parameters:
+- `destinationChainId`: The ID of the chain to send the message to
+- `data`: The message data to be sent (encoded using `abi.encode()`)
 
-```javascript
-const myContract = new ethers.Contract(contractAddress, MessageClientABI, signer);
+Returns:
+- `txId`: A unique transaction ID for the message
+
+### _processMessage()
+
+The `_processMessage()` function receives and processes data from another blockchain. You must override this function in your contract to handle incoming messages.
+
+```solidity
+function _processMessage(uint _sourceChainId, uint _sourceMsgSender, bytes calldata _data) internal virtual;
 ```
 
-## Using the MessageClient Configuration
+Parameters:
+- `_sourceChainId`: ID of the source chain from where the message is coming
+- `_sourceMsgSender`: Address of the sender on the source chain (can be ignored in many cases)
+- `_data`: Message data (decode using `abi.decode()`)
 
-You can import common addresses and configuration for the `MessageClient` contract directly from the package:
+## Modifiers
 
-```javascript
-// CommonJS
-const chainsConfig = require('./config/chains');
+The MessageClient contract provides useful modifiers:
 
-// ES6
-import chainsConfig from './config/chains';
-```
+- `onlyActiveChain(uint chainId)`: Ensures the destination chain is active and configured
+- `onlySelf(address sender, uint sourceChainId)`: Validates that the message is from a trusted source
 
-You can then reference values from chains by using the chainId as an index:
+## Configuration
 
-```javascript
-// Get the message contract address of the current network
-const messageAddress = chainsConfig[hre.network.config.chainId].message; 
-```
-
-### After Deployment Configuration Script
-
-This script is an example to be ran after all of the corresponding Client contracts have been deployed and addresses collected. This script is used to enable all of the desired chains and configure each of the contracts to accept messages from each other utilizing the ```configureClient()``` function in the package.
+After deploying your contracts, you need to configure them to communicate with each other. This is done using the `configureClient()` function:
 
 ```javascript
 const { ethers } = require('ethers');
@@ -102,9 +107,9 @@ const { MessageClientABI } = require('./message/abi');
 
 async function configureContract() {
     // Configuration Parameters
-    const rpcUrl = 'https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY'; // Example Ethereum RPC URL
-    const privateKey = '0xYOUR_PRIVATE_KEY'; // Example private key
-    const contractAddress = '0xabcd...1234'; // Example deployed contract address on Ethereum
+    const rpcUrl = 'https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY'; 
+    const privateKey = '0xYOUR_PRIVATE_KEY';
+    const contractAddress = '0xabcd...1234'; // Your deployed contract address
 
     // Initialize ethers with provider and signer
     const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
@@ -115,12 +120,12 @@ async function configureContract() {
 
     try {
         const chains = [5, 11155111, 17000]; // Desired chain IDs
-        const endpoints = ['0x000000','0x000000','0x000000']; // YOUR deployed instances of ATWTest on each chain
+        const endpoints = ['0x000000','0x000000','0x000000']; // Your deployed instances on each chain
         const confirmations = [12, 6, 6]; // Desired confirmation counts for each chain
 
         // Configure the client with MessageV3 address and chain data
         const tx = await myContract.configureClient(
-            chainsConfig[hre.network.config.chainId].message, // Use the message contract address of the current network
+            chainsConfig[hre.network.config.chainId].message, // Message contract address
             chains, 
             endpoints, 
             confirmations
@@ -136,3 +141,14 @@ async function configureContract() {
 
 // Execute the configuration
 configureContract();
+```
+
+## Next Steps
+
+Ready to build more complex cross-chain applications? Check out our examples:
+
+- [Cross-Chain Token](/examples/crosschain-token) - Create a token that can move between blockchains
+- [Cross-Chain NFT](/examples/crosschain-nft) - Build NFTs that can travel across chains
+- [Private Oracle](/examples/private-oracle) - Connect your smart contracts to off-chain data
+
+Need help? Join our [Discord community](https://discord.gg/vialabs) for support and discussions.

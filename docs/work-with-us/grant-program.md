@@ -1,127 +1,76 @@
 ---
 sidebar_position: 3
+title: Grant Program
 ---
 
 # VIA Labs Grant Program
 
-## Overview
+## Building the Cross-Chain Ecosystem Together
 
-The VIA Labs Grant Program aims to support innovative projects building on our technology. We're looking for projects that can leverage VIA's cross-chain capabilities to create valuable solutions for users and the broader ecosystem.
+The VIA Labs Grant Program supports innovative developers and teams building on our cross-chain technology. We provide resources to help promising projects leverage VIA's interoperability solutions and create valuable applications for the blockchain ecosystem.
 
-## Application Form
+## What We Offer
 
-### Project Information
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px', margin: '30px 0'}}>
+  <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', boxShadow: 'var(--ifm-card-shadow)'}}>
+    <h3>Financial Support</h3>
+    <p>We provide funding to accelerate development, cover operational costs, and help bring your vision to life.</p>
+  </div>
+  
+  <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', boxShadow: 'var(--ifm-card-shadow)'}}>
+    <h3>Technical Guidance</h3>
+    <p>Access to VIA Labs engineers for technical support, code reviews, and architecture guidance.</p>
+  </div>
+  
+  <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', boxShadow: 'var(--ifm-card-shadow)'}}>
+    <h3>Ecosystem Connections</h3>
+    <p>Introductions to blockchain networks, investors, and other projects in our ecosystem.</p>
+  </div>
+  
+  <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', boxShadow: 'var(--ifm-card-shadow)'}}>
+    <h3>Marketing Support</h3>
+    <p>Co-marketing opportunities, community introductions, and increased visibility for your project.</p>
+  </div>
+</div>
 
-**Project Name:**  
-*What is your project called?*
+## What We're Looking For
 
-**Project Description:**  
-*Provide a brief description of your project (150-300 words). What problem does it solve? What makes it unique?*
+We support projects across various categories that leverage VIA's cross-chain capabilities:
 
-**Project Category:**  
-*Select the category that best describes your project:*
-- [ ] DeFi
-- [ ] NFT/Gaming
-- [ ] Infrastructure
-- [ ] DAO/Governance
-- [ ] Social
-- [ ] Other (please specify)
+### Project Categories
+- **DeFi Applications**: Cross-chain lending, DEXs, yield aggregators
+- **NFT & Gaming**: Cross-chain NFTs, gaming assets, metaverse projects
+- **Infrastructure**: Developer tools, wallets, analytics platforms
+- **DAO & Governance**: Cross-chain voting, treasury management
+- **Social Applications**: Decentralized social networks, reputation systems
+- **Innovative Use Cases**: Novel applications of cross-chain technology
 
-**Project Status:**  
-*What stage is your project currently in?*
-- [ ] Concept/Idea
-- [ ] Prototype/MVP
-- [ ] Beta
-- [ ] Live on testnet
-- [ ] Live on mainnet
+### Evaluation Criteria
+- **Innovation**: How unique and valuable is your solution?
+- **Technical Feasibility**: Is your team capable of executing the vision?
+- **Integration**: How effectively does your project leverage VIA's cross-chain capabilities?
+- **Market Potential**: Is there a clear market need and adoption strategy?
+- **Team Background**: Do you have relevant experience and commitment?
 
-**Technical Implementation:**  
-*Describe how you plan to implement your project technically. Include any relevant architecture details, technologies used, and how VIA's cross-chain capabilities will be integrated.*
+## How to Apply
 
-**Timeline:**  
-*Provide an estimated timeline for your project development and key milestones.*
+Our application process is straightforward:
 
-### Team Information
+1. **Initial Contact**: Reach out to us at [developer@vialabs.io](mailto:developer@vialabs.io) with a brief description of your project
+2. **Introduction Call**: Schedule a call using our [Calendly](https://calendly.com/vialabs) to discuss your project in detail
+3. **Proposal Review**: Our team will review your proposal and provide feedback
+4. **Grant Decision**: Selected projects will receive a formal grant offer
+5. **Milestone-Based Funding**: Grants are typically disbursed based on achieving agreed-upon milestones
 
-**Team Name:**  
-*What is your team or organization called?*
-
-**Team Members:**  
-*List the core team members and their roles/expertise.*
-
-**Previous Projects:**  
-*Has your team built any previous projects? If yes, please provide details and links.*
-
-**GitHub/GitLab:**  
-*Provide links to your project repositories (if available).*
-
-**Website/Social Media:**  
-*Provide links to your project website and social media accounts (if available).*
-
-### Funding & Support
-
-**Previous Funding:**  
-*Have you received any funding for this project before? If yes, please provide details.*
-
-**Grant Request Amount:**  
-*What amount of funding are you requesting? Please justify this amount based on your project needs.*
-
-**How will the grant be used?**  
-*Provide a breakdown of how you plan to use the grant funds.*
-
-**Additional Support Needed:**  
-*Beyond funding, what other support would be valuable for your project?*
-- [ ] Technical guidance
-- [ ] Marketing support
-- [ ] Business development
-- [ ] Connections to partners/investors
-- [ ] Other (please specify)
-
-### Project Impact & Vision
-
-**Target Users:**  
-*Who are the target users for your project?*
-
-**Market Opportunity:**  
-*What is the market opportunity for your project? How large is the potential user base?*
-
-**Competitive Landscape:**  
-*Who are your competitors? How does your project differentiate from existing solutions?*
-
-**Success Metrics:**  
-*How will you measure the success of your project? What KPIs will you track?*
-
-**Long-term Vision:**  
-*What is your long-term vision for this project? How do you plan to sustain it beyond the grant period?*
-
-### Technical Questions
-
-**Integration with VIA:**  
-*How specifically will your project integrate with VIA's cross-chain technology? Which features will you use?*
-
-**Technical Challenges:**  
-*What are the main technical challenges you anticipate in building your project?*
-
-**Security Considerations:**  
-*How will you ensure the security of your project? What measures will you take to protect user funds and data?*
-
-### Additional Information
-
-**Why VIA?**  
-*Why did you choose to build on VIA? What attracted you to our technology?*
-
-**Anything Else:**  
-*Is there anything else you'd like to share about your project or team that would help us evaluate your application?*
-
-## Submission Process
-
-Please submit your completed application to [grants@vialabs.io](mailto:grants@vialabs.io). Our team will review your application and get back to you within 2 weeks.
-
-For any questions about the grant program, please contact us at [support@vialabs.io](mailto:support@vialabs.io).
-
-## Terms and Conditions
+## Program Terms
 
 - Grants are disbursed based on achievement of agreed-upon milestones
 - Projects must acknowledge VIA Labs support in their communications
-- Projects must provide regular updates on progress
-- VIA Labs reserves the right to revoke grants if terms are not met
+- Regular progress updates are required
+- Projects retain full ownership of their intellectual property
+
+## Connect With Us Today
+
+Have a promising cross-chain project idea? We want to hear from you! Contact us at [developer@vialabs.io](mailto:developer@vialabs.io) or schedule a call through our [Calendly](https://calendly.com/vialabs) to discuss how we can support your vision.
+
+Join our [Discord community](https://discord.gg/vialabs) to connect with other builders and the VIA Labs team.

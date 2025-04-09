@@ -13,22 +13,20 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'General',
+      label: 'Getting Started',
       collapsed: false,
       items: [
-        'general/package',
+        'general/technology-overview',
         'general/supported-networks',
+        'general/package',
         'general/fees-and-gas',
-        'general/testnet-tokens',
-        'general/tos',
-        'general/architecture',
-        'general/faq',
-        'general/troubleshooting',
+        'general/bridged-usdc',
+        'general/proto-usd',
       ],
     },
     {
       type: 'category',
-      label: 'Examples',
+      label: 'Examples & Implementation',
       collapsed: false,
       items: [
         'examples/crosschain-token',
@@ -43,14 +41,17 @@ module.exports = {
       items: [
         'work-with-us/developers',
         'work-with-us/blockchains',
+        'work-with-us/grant-program',
       ],
     },
     {
       type: 'category',
-      label: 'Slides',
+      label: 'Support & Resources',
       collapsed: false,
       items: [
-        'slides/quickstart',
+        'general/faq',
+        'general/troubleshooting',
+        'general/tos',
       ],
     },
   ],
