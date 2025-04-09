@@ -51,6 +51,7 @@ module.exports = {
       items: [
         'general/faq',
         'general/troubleshooting',
+        'general/testnet-tokens',
         'general/tos',
       ],
     },
