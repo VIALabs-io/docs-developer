@@ -43,15 +43,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
         title: '',
         logo: {
           alt: 'VIA Labs Logo',
-          src: 'img/logo-black.svg',
-          srcDark: 'img/logo-white.svg',
+          src: 'img/logo-white.svg',
         },
         items: [
           {
@@ -150,7 +149,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         copyright: `Copyright © ${new Date().getFullYear()} VIA Labs`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['solidity'],
       },
