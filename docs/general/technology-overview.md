@@ -4,138 +4,314 @@ sidebar_position: 1
 
 # Technology Overview
 
-![Technology Overview](/tech-overview.webp)
+<div className="doc-overview">
+  VIA Labs provides a comprehensive cross-chain infrastructure that connects different blockchain networks and bridges the gap between Web2 and Web3 systems. Our technology enables seamless communication between smart contracts across different blockchains, as well as integration with traditional web services and databases.
+</div>
 
-## Smart Contract to Smart Contract Communication
+## The Problem: Web2/Web3 Fragmentation
 
-### Process Flow
+<div className="doc-grid-3">
+  <div className="doc-card">
+    <h3>Fragmented Connectivity</h3>
+    <p>Blockchain ecosystems operate in isolation, and are segmented from traditional web2 networks, limiting the potential of decentralized applications.</p>
+  </div>
+  
+  <div className="doc-card">
+    <h3>Fragmented Liquidity</h3>
+    <p>Capital is locked within individual chains, reducing efficiency and increasing costs, with no true web2 connectivity for unified solutions.</p>
+  </div>
+  
+  <div className="doc-card">
+    <h3>Fragmented Experience</h3>
+    <p>Developers and users face inconsistent interfaces across different blockchain environments restricting their userbase and new user onboarding.</p>
+  </div>
+</div>
 
-1. **Origin Smart Contract Sends a Message**:
-   - `sendMessage()`: The process begins when the origin smart contract on the origin blockchain calls the sendMessage() function. This function sends a message to the VIA Gateway Contract on the origin chain.
+## Our Solution
 
-2. **Message Detection**:
-   - The validators "listen" to the gateway contracts to ensure a message is relayed.
-
-3. **Multi Layer Security Stack**:
-   - **Validation**: The message passes through multiple layers of security. Each layer must pass for the message to proceed. See [Security Model](#security-model) below for more information.
-
-4. **Message Reception**:
-   - The VIA Gateway Contract on the recipient blockchain receives the relayed message from the Validation Cloud and forwards it to the destination smart contract.
-
-5. **Destination Code Execution**:
-   - `_processMessage()`: The destination smart contract on the recipient blockchain processes the message received from the relayer contract. This final step completes the communication, enabling the destination contract to take appropriate actions based on the message content.
-
-## Key Components
-
-### Gateway Contracts
-
-Gateway contracts are essential components that enable different blockchains to communicate with each other:
-
-- **Purpose**: Handle the secure and efficient transfer of data and messages between networks.
-- **Automated Setup**: These contracts are pre-deployed by the system, so developers don't need to set them up manually.
-- **Seamless Communication**: They ensure that messages and data are correctly routed and processed between different blockchains.
-
-### Validation Cloud
-
-The Validation Cloud facilitates cross-chain communication by relaying messages from the source chain to the destination chain:
-
-- **Purpose**: Off-chain relayers in the validation cloud ensure seamless and reliable execution of cross-chain transactions within the VIA Labs ecosystem.
-- **Execution Handling**: Triggers the `_processMessage()` on the destination contract, ensuring correct operation execution.
-- **Gas Reimbursement**: An on-chain component pays initial gas fees for transactions. Destination contracts reimburse for these fees.
+<div className="doc-grid-2">
+  <div className="doc-card">
+    <h3>True Multi-Hop Routing</h3>
+    <p>VIA Labs enables seamless communication between different networks, web2 and web3, allowing for direct cross-chain functionality built into smart contracts.</p>
+  </div>
+  
+  <div className="doc-card">
+    <h3>Web2 to Web3 Connectivity</h3>
+    <p>Connect traditional web services, APIs, and databases directly to blockchain networks, bridging the gap between centralized and decentralized systems.</p>
+  </div>
+  
+  <div className="doc-card">
+    <h3>Decentralized Trust</h3>
+    <p>Multi-layered security model with Proof of Stake validation ensures reliable and secure cross-chain messaging without centralized points of failure.</p>
+  </div>
+  
+  <div className="doc-card">
+    <h3>Unified Developer Experience</h3>
+    <p>Consistent APIs and tools across all supported blockchains, simplifying the development of cross-chain applications and reducing time-to-market.</p>
+  </div>
+</div>
 
 ## Security Model
 
-VIA Labs' cross-chain network uses a multi-layered validation process to ensure the security and integrity of transactions:
+<div className="doc-grid-2">
+  <div className="doc-security-layer">
+    <h4 className="doc-security-layer-title">VIA Layer</h4>
+    <ul>
+      <li><strong>Operated by:</strong> VIA Labs</li>
+      <li><strong>Function:</strong> Validates transactions within the VIA Labs ecosystem</li>
+      <li><strong>Consensus:</strong> Proof of Authority (no stake required, no validation rewards)</li>
+    </ul>
+  </div>
+  
+  <div className="doc-security-layer">
+    <h4 className="doc-security-layer-title">Chain Layer</h4>
+    <ul>
+      <li><strong>Managed by:</strong> Blockchain Foundations</li>
+      <li><strong>Function:</strong> Each blockchain involved manages its own validation layer</li>
+      <li><strong>Purpose:</strong> Ensures that messages exiting the blockchain are verified</li>
+      <li><strong>Consensus:</strong> Proof of Authority (no stake required, no validation rewards)</li>
+    </ul>
+  </div>
+  
+  <div className="doc-security-layer">
+    <h4 className="doc-security-layer-title">Project Layer</h4>
+    <ul>
+      <li><strong>Operated by:</strong> Integrating dApps</li>
+      <li><strong>Function:</strong> Projects can operate their own private validation layer</li>
+      <li><strong>Purpose:</strong> Provides additional security tailored to the specific needs of the project</li>
+      <li><strong>Consensus:</strong> Proof of Authority (no stake required, no validation rewards)</li>
+    </ul>
+  </div>
+  
+  <div className="doc-security-layer">
+    <h4 className="doc-security-layer-title">PoS Layer</h4>
+    <ul>
+      <li><strong>Operated by:</strong> Community (individuals, dApps, and foundations)</li>
+      <li><strong>Requirement:</strong> Participants must stake $VIA tokens</li>
+      <li><strong>Consensus:</strong> Proof of Stake (stake required, validators earn rewards)</li>
+    </ul>
+  </div>
+</div>
 
-### VIA Layer
-- **Operated by**: VIA Labs
-- **Function**: Validates transactions within the VIA Labs ecosystem
-- **Consensus**: Proof of Authority (no stake required, no validation rewards)
+## Web2 to Web3 Connectivity
 
-### Chain Layer
-- **Managed by**: Blockchain Foundations
-- **Function**: Each blockchain involved manages its own validation layer
-- **Purpose**: Ensures that messages exiting the blockchain are verified
-- **Consensus**: Proof of Authority (no stake required, no validation rewards)
-
-### Project Layer
-- **Operated by**: Integrating dApps
-- **Function**: Projects can operate their own private validation layer
-- **Purpose**: Provides additional security tailored to the specific needs of the project
-- **Consensus**: Proof of Authority (no stake required, no validation rewards)
-
-### PoL Layer (Coming Soon)
-- **Operated by**: Community (individuals, dApps, and foundations)
-- **Requirement**: Participants must stake $VIA tokens
-- **Consensus**: Proof of Liquidity (stake required, validators earn rewards)
-- **Validation**: 51% consensus mechanism
-
-> For a transaction to be processed, it must pass through all four layers. This multi-layered approach provides robust security for cross-chain messaging.
+<div className="doc-web2-web3">
+  <p>One of VIA Labs' most powerful capabilities is bridging the gap between traditional web services (Web2) and blockchain networks (Web3). This connectivity enables seamless integration of existing systems, databases, and APIs with decentralized applications.</p>
+  
+  <div className="doc-grid-3">
+    <div className="doc-card">
+      <h4>Web2 Data Sources</h4>
+      <ul>
+        <li>Private Databases</li>
+        <li>Public APIs</li>
+        <li>AI & ML Services</li>
+        <li>Legacy Systems</li>
+      </ul>
+    </div>
+    
+    <div className="doc-card doc-card-highlight">
+      <h4>VIA Connectivity Layer</h4>
+      <ul>
+        <li>Secure Data Validation</li>
+        <li>Data Transformation</li>
+        <li>Access Control</li>
+        <li>Attestation</li>
+        <li>Cross-Chain Delivery</li>
+      </ul>
+    </div>
+    
+    <div className="doc-card">
+      <h4>Web3 Destinations</h4>
+      <ul>
+        <li>Smart Contracts</li>
+        <li>DeFi Protocols</li>
+        <li>Cross-Chain dApps</li>
+        <li>On-Chain Governance</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div className="doc-features">
+    <div className="doc-feature">
+      <h4>Bidirectional Data Flow</h4>
+      <p>Data can flow from Web2 to Web3 and back, enabling complex workflows that span both environments.</p>
+    </div>
+    
+    <div className="doc-feature">
+      <h4>Custom Data Providers</h4>
+      <p>Create custom data providers that connect to any API or database and deliver information to smart contracts.</p>
+    </div>
+    
+    <div className="doc-feature">
+      <h4>Private Data Integration</h4>
+      <p>Securely integrate private enterprise data with blockchain applications without exposing sensitive information.</p>
+    </div>
+    
+    <div className="doc-feature">
+      <h4>Multi-Chain Broadcasting</h4>
+      <p>Broadcast the same data to multiple chains with a single transaction, reducing costs and latency.</p>
+    </div>
+  </div>
+</div>
 
 ## Cross-Chain Token Implementation
 
-VIA's cross-chain token technology enables native tokens to exist simultaneously on multiple blockchains while maintaining a unified total supply:
-
-- **Unified Token Contract**: Instead of creating wrapped tokens, VIA enables a single token to exist natively across multiple chains.
-- **Atomic Cross-Chain Transfers**: When tokens move between chains, they are burned on the source chain and minted on the destination chain in a single atomic operation.
-- **Consistent Token Properties**: The same token symbol, name, and decimals are maintained across all chains.
-- **Unified Total Supply**: The sum of token balances across all chains always equals the total supply, ensuring economic consistency.
+<div className="doc-cross-chain-token">
+  <p>VIA's cross-chain token technology enables native tokens to exist simultaneously on multiple blockchains while maintaining a unified total supply and consistent properties.</p>
+  
+  <div className="doc-grid-2">
+    <div className="doc-features-list">
+      <div className="doc-feature-item">
+        <h4>Unified Token Contract</h4>
+        <p>Instead of creating wrapped tokens, VIA enables a single token to exist natively across multiple chains.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Atomic Cross-Chain Transfers</h4>
+        <p>When tokens move between chains, they are burned on the source chain and minted on the destination chain in a single atomic operation.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Consistent Token Properties</h4>
+        <p>The same token symbol, name, and decimals are maintained across all chains.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Unified Total Supply</h4>
+        <p>The sum of token balances across all chains always equals the total supply, ensuring economic consistency.</p>
+      </div>
+    </div>
+    
+    <div className="doc-benefits">
+      <h4>Key Benefits</h4>
+      
+      <div className="doc-benefit">
+        <h5>Enhanced Liquidity</h5>
+        <p>Tokens can access liquidity pools across multiple blockchains</p>
+      </div>
+      
+      <div className="doc-benefit">
+        <h5>Improved Security</h5>
+        <p>No wrapped tokens means fewer attack vectors and points of failure</p>
+      </div>
+      
+      <div className="doc-benefit">
+        <h5>Reduced Costs</h5>
+        <p>Lower fees compared to traditional bridge solutions</p>
+      </div>
+      
+      <div className="doc-benefit">
+        <h5>Consistent Experience</h5>
+        <p>Same token properties and behavior across all chains</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Cross-Chain NFT Capabilities
 
-VIA's cross-chain NFT infrastructure allows non-fungible tokens to move freely between blockchains while preserving their uniqueness and provenance:
-
-- **Persistent Metadata**: NFT metadata and attributes remain consistent regardless of which blockchain the NFT currently resides on.
-- **Provenance Tracking**: The complete ownership history is maintained across chains, preserving the NFT's provenance.
-- **Chain-Agnostic Ownership**: Users can own and trade the same NFT on different blockchains without creating wrapped versions.
-- **Cross-Chain Royalties**: Creator royalties can be enforced across all supported blockchains.
+<div className="doc-cross-chain-nft">
+  <p>VIA's cross-chain NFT infrastructure allows non-fungible tokens to move freely between blockchains while preserving their uniqueness and provenance.</p>
+  
+  <div className="doc-grid-2">
+    <div className="doc-features-list">
+      <div className="doc-feature-item">
+        <h4>Persistent Metadata</h4>
+        <p>NFT metadata and attributes remain consistent regardless of which blockchain the NFT currently resides on.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Provenance Tracking</h4>
+        <p>The complete ownership history is maintained across chains, preserving the NFT's provenance.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Chain-Agnostic Ownership</h4>
+        <p>Users can own and trade the same NFT on different blockchains without creating wrapped versions.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Cross-Chain Royalties</h4>
+        <p>Creator royalties can be enforced across all supported blockchains.</p>
+      </div>
+    </div>
+    
+    <div className="doc-use-cases">
+      <h4>Use Cases</h4>
+      
+      <div className="doc-use-case">
+        <h5>Cross-Chain Gaming</h5>
+        <p>Game items usable across multiple blockchain-based games</p>
+      </div>
+      
+      <div className="doc-use-case">
+        <h5>Multi-Chain Marketplaces</h5>
+        <p>List and sell NFTs on marketplaces across different blockchains</p>
+      </div>
+      
+      <div className="doc-use-case">
+        <h5>Metaverse Interoperability</h5>
+        <p>Use the same digital assets across different metaverse platforms</p>
+      </div>
+      
+      <div className="doc-use-case">
+        <h5>Cross-Chain Identity</h5>
+        <p>Portable digital identity verification across blockchains</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Private Oracle Network
 
-VIA's private oracle solution enables secure off-chain data delivery to smart contracts across multiple blockchains:
-
-- **Decentralized Data Sources**: Connect to any API or data source and deliver the information to smart contracts on any supported blockchain.
-- **Cross-Chain Data Consistency**: Ensure the same data is available to contracts across different blockchains.
-- **Custom Validation Logic**: Implement custom validation rules for data verification before delivery to smart contracts.
-- **Private Data Feeds**: Create private data feeds that are only accessible to specific contracts or addresses.
-- **Efficient Data Broadcasting**: Broadcast the same data to multiple chains with a single transaction, reducing costs and latency.
-
-## Use Cases
-
-VIA Labs' cross-chain messaging infrastructure enables a wide range of applications:
-
-- **Cross-Chain Tokens and NFTs**: Enable the creation and management of both cross-chain tokens and non-fungible tokens (NFTs).
-- **Rebroadcast Oracle Data**: Oracle data can be broadcasted across many EVM chains.
-- **Multi-Chain ICOs**: For projects looking to raise capital through Initial Coin Offerings (ICOs).
-- **Lending**: Cross-chain lending platforms can be built to allow users to lend and borrow assets across different blockchains.
-- **Arbitrage Bots**: Arbitrage opportunities across multiple chains can be identified and capitalized upon using bots built with cross-chain messaging.
-- **Unified Metaverses**: Build metaverses that span across multiple chains, creating a truly interconnected virtual world.
-- **Social Media Notifications**: Create social media notifications that are triggered by cross-chain events.
-
-## Learn More
-
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px', margin: '30px 0'}}>
-  <a href="/examples/crosschain-token" style={{textDecoration: 'none', color: 'var(--ifm-font-color-base)'}}>
-    <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', transition: 'transform 0.3s ease', boxShadow: 'var(--ifm-card-shadow)', backgroundColor: 'var(--ifm-card-background-color)', display: 'flex', flexDirection: 'column', height: '100%', cursor: 'pointer'}} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-      <h3 style={{marginTop: '0', color: 'var(--ifm-heading-color)'}}>Cross-Chain Token Example</h3>
-      <p style={{flex: '1'}}>Create a token that can move between blockchains while maintaining a unified total supply.</p>
-      <div style={{color: 'var(--ifm-color-primary)', fontWeight: 'bold', marginTop: 'auto'}}>View Example →</div>
-    </div>
-  </a>
+<div className="doc-private-oracle">
+  <p>VIA's private oracle solution enables secure off-chain data delivery to smart contracts across multiple blockchains. Unlike traditional oracles, VIA's private oracle network provides enhanced privacy, customization, and cross-chain capabilities.</p>
   
-  <a href="/examples/crosschain-nft" style={{textDecoration: 'none', color: 'var(--ifm-font-color-base)'}}>
-    <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', transition: 'transform 0.3s ease', boxShadow: 'var(--ifm-card-shadow)', backgroundColor: 'var(--ifm-card-background-color)', display: 'flex', flexDirection: 'column', height: '100%', cursor: 'pointer'}} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-      <h3 style={{marginTop: '0', color: 'var(--ifm-heading-color)'}}>Cross-Chain NFT Example</h3>
-      <p style={{flex: '1'}}>Build NFTs that can travel across chains while preserving their uniqueness and provenance.</p>
-      <div style={{color: 'var(--ifm-color-primary)', fontWeight: 'bold', marginTop: 'auto'}}>View Example →</div>
+  <div className="doc-grid-2">
+    <div className="doc-features-list">
+      <div className="doc-feature-item">
+        <h4>Decentralized Data Sources</h4>
+        <p>Connect to any API or data source and deliver the information to smart contracts on any supported blockchain.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Cross-Chain Data Consistency</h4>
+        <p>Ensure the same data is available to contracts across different blockchains, maintaining consistency.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Custom Validation Logic</h4>
+        <p>Implement custom validation rules for data verification before delivery to smart contracts.</p>
+      </div>
+      
+      <div className="doc-feature-item">
+        <h4>Private Data Feeds</h4>
+        <p>Create private data feeds that are only accessible to specific contracts or addresses.</p>
+      </div>
     </div>
-  </a>
-  
-  <a href="/examples/private-oracle" style={{textDecoration: 'none', color: 'var(--ifm-font-color-base)'}}>
-    <div style={{border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', padding: '20px', transition: 'transform 0.3s ease', boxShadow: 'var(--ifm-card-shadow)', backgroundColor: 'var(--ifm-card-background-color)', display: 'flex', flexDirection: 'column', height: '100%', cursor: 'pointer'}} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-      <h3 style={{marginTop: '0', color: 'var(--ifm-heading-color)'}}>Private Oracle Example</h3>
-      <p style={{flex: '1'}}>Connect your smart contracts to off-chain data sources across multiple blockchains.</p>
-      <div style={{color: 'var(--ifm-color-primary)', fontWeight: 'bold', marginTop: 'auto'}}>View Example →</div>
+    
+    <div className="doc-advanced-capabilities">
+      <h4>Advanced Capabilities</h4>
+      
+      <div className="doc-capability">
+        <h5>Confidential Computing</h5>
+        <p>Process sensitive data in secure enclaves (TEEs) to maintain privacy while still providing valuable insights.</p>
+      </div>
+      
+      <div className="doc-capability">
+        <h5>AI Integration</h5>
+        <p>Incorporate AI models to analyze data and provide intelligent insights to on-chain applications.</p>
+      </div>
+      
+      <div className="doc-capability">
+        <h5>Custom Computation</h5>
+        <p>Execute complex off-chain computations that would be prohibitively expensive to run on-chain.</p>
+      </div>
+      
+      <div className="doc-capability">
+        <h5>Permissioned Access</h5>
+        <p>Control which smart contracts can access specific data feeds, enabling monetization of valuable data.</p>
+      </div>
     </div>
-  </a>
+  </div>
 </div>

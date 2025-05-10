@@ -23,8 +23,8 @@
   --ifm-color-primary-lighter: #FFFFFF;
   --ifm-color-primary-lightest: #FFFFFF;
   
-  --ifm-background-color: #0a0a0a; /* Slightly lighter than pure black */
-  --ifm-navbar-background-color: rgba(17, 17, 17, 0.8);
+  --ifm-background-color: #000000; /* Pure black background */
+  --ifm-navbar-background-color: rgba(0, 0, 0, 0.95);
   --ifm-navbar-link-color: #FFFFFF;
   --ifm-navbar-link-hover-color: var(--via-turquoise);
   --ifm-menu-color: #FFFFFF;
@@ -75,7 +75,7 @@
   position: relative;
   padding: 6rem 0 6rem;
   overflow: hidden;
-  background-color: #050505; /* Slightly darker than the main background */
+  background-color: #000000; /* Pure black background */
   color: var(--via-white);
   z-index: 0;
 }
@@ -103,9 +103,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at top right, rgba(255, 0, 255, 0.15), transparent 50%),
-              radial-gradient(circle at bottom left, rgba(0, 229, 229, 0.15), transparent 50%),
-              linear-gradient(to bottom, transparent 85%, var(--ifm-background-color) 100%);
+  background: linear-gradient(to bottom, transparent 85%, var(--ifm-background-color) 100%);
   z-index: 0;
   pointer-events: none;
 }
@@ -309,7 +307,7 @@ html[data-theme='light'] .hero .button--secondary:hover {
 }
 
 html[data-theme='dark'] .feature-card {
-  background-color: #151515; /* Lighter than the main background in dark mode */
+  background-color: #000000; /* Pure black background */
   border: 1px solid #222222;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -401,7 +399,7 @@ html[data-theme='light'] .feature-card__link:hover {
 
 /* Terminal Component */
 .terminal {
-  background-color: var(--via-dark-gray);
+  background-color: #000000;
   border-radius: 12px;
   overflow: hidden;
   margin: 2rem 0;
@@ -425,7 +423,7 @@ html[data-theme='light'] .terminal {
 }
 
 .terminal__header {
-  background-color: var(--via-gray);
+  background-color: #000000;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
@@ -636,7 +634,7 @@ html[data-theme='light'] .section-description {
 
 /* Code Blocks */
 pre {
-  background-color: var(--via-dark-gray) !important;
+  background-color: #000000 !important;
   border: 1px solid var(--via-gray) !important;
   border-radius: 8px !important;
   margin: 1.5rem 0 !important;
@@ -770,7 +768,7 @@ html[data-theme='light'] .button--primary:hover {
 /* Modern Footer Styling */
 .footer {
   position: relative;
-  background-color: #0a0a0a;
+  background-color: #000000;
   color: var(--via-white);
   padding: 3rem 0 1.5rem;
   overflow: hidden;
@@ -921,7 +919,7 @@ html[data-theme='light'] .footer__copyright {
 
 /* Diagram Container */
 .diagram-container {
-  background-color: #0a0a0a;
+  background-color: #000000;
   border-radius: 12px;
   padding: 20px;
   margin: 30px 0;
@@ -1023,7 +1021,7 @@ html[data-theme='light'] .diagram-container {
 
 /* Enhanced Navbar - removed backdrop filter for performance */
 .navbar {
-  background-color: rgba(17, 17, 17, 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   border-bottom: 1px solid rgba(51, 51, 51, 0.7);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
@@ -1057,7 +1055,7 @@ div[class*=' codeBlockContent_'] code {
   content: '';
   display: block;
   height: 30px;
-  background-color: rgba(51, 51, 51, 0.8);
+  background-color: #000000;
   border-bottom: 1px solid rgba(0, 229, 229, 0.2);
 }
 
@@ -1098,9 +1096,7 @@ code:not([class*="language-"]) {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(0, 229, 229, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.03) 0%, transparent 50%);
+  background: #000000;
   pointer-events: none;
   z-index: -1;
 }
@@ -1183,7 +1179,7 @@ code:not([class*="language-"]) {
 
 .chain-icons-container {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #000000;
   backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1px solid var(--via-gray);
