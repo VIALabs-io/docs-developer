@@ -172,8 +172,10 @@ It is mandatory to read and agree to the [Terms of Service](/general/tos) before
 | Immutable Testnet           | 13473      | 0xC7E87B6614DAb7a4B3Feaa9e56a2cA29A84AD0a8 |
 | IoTeX Testnet               | 4690       | 0x3B5b764229b2EdE0162220aF51ab6bf7f8527a4F |
 | Japan Open Chain Testnet    | 10081      | 0x3B5b764229b2EdE0162220aF51ab6bf7f8527a4F | 
+| Kadena EVM Testnet          | 5920       | 0x861b0FC81737122C5BeC247dF709Ca1165cC7409 |
 | Katla Testnet               | 167008     | 0xA95c0BC77Ab8a8EfA3dF00366FFAe5CB1A2cba15 |
 | Kava Testnet                | 2221       | 0xd577fcBee5734c2da5e0063fF1df38845DaA7117 |
+| Kite AI Testnet             | 2368       | 0x3B5b764229b2EdE0162220aF51ab6bf7f8527a4F |
 | Klaytn Testnet              | 1001       | 0xdCa897f920Df8015169838c428479D5e3d5Bf526 |
 | Kyoto Testnet               | 1998       | 0xdCa897f920Df8015169838c428479D5e3d5Bf526 |
 | Linea Testnet               | 59140      | 0x0eefCF172F7e5C04A8d565f4e955968221fDb18f |
