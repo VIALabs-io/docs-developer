@@ -210,7 +210,7 @@ hide_table_of_contents: true
     <div className="doc-terminal-line">
       <span className="doc-terminal-prompt">$</span>
       <span className="doc-terminal-command">
-        <span className="command-string">npm</span> run dev
+        <span className="command-string">npm</span> start
       </span>
     </div>
   </div>

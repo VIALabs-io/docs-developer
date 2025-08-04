@@ -10,7 +10,7 @@ function Terminal() {
 cd quickstart-token
 npm install
 node scripts/deploy.js
-cd frontend && npm install && npm run dev`;
+cd frontend && npm install && npm start`;
 
   // Function to copy all commands
   const copyAllCommands = () => {
@@ -56,7 +56,7 @@ cd frontend && npm install && npm run dev`;
         </div>
         <div className="terminal__line">
           <span className="terminal__prompt" style={{ userSelect: 'none' }}>$</span>
-          <span className="terminal__command">cd frontend && npm install && npm run dev</span>
+          <span className="terminal__command">cd frontend && npm install && npm start</span>
         </div>
       </div>
     </div>
