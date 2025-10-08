@@ -7,7 +7,7 @@ sidebar_position: 2
 We currently support the following networks. If you are a blockchain or you wish to have a blockchain added to our network, please see the [Work With Us](/work-with-us/blockchains) page for more information. All of the network configuration including contract addresses are also available to be imported directly from the solidity package including the contract ABIs. Please see the documentation for more information. 
 
 :::info
-It is mandatory to read and agree to the [Terms of Service](/general/tos) before utilizing our services!
+Please see the [GitHub page](https://github.com/VIALabs-io/npm-registry/tree/master/src/chains) for contract address information.
 :::
 
 ### Mainnets
@@ -245,4 +245,5 @@ It is mandatory to read and agree to the [Terms of Service](/general/tos) before
 | Zircuit Testnet             | 48899      |
 | zkSync Testnet              | 300        | 
 | Zora Testnet                | 999999999  |
+
 
